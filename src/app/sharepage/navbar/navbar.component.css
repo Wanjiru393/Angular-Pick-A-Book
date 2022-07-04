@@ -1,0 +1,11 @@
+.navbar-light .navbar-nav .nav-link.active-link{
+font-weight: bold;
+color: var(--primary-color);
+text-decoration: underline;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: var(--secondary-color);
+}
+.navbar-brand{
+    background-image: url("../../../assets/img/logo.png");
+}
