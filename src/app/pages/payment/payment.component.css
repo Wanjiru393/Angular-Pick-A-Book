@@ -1,0 +1,20 @@
+.paymentheader{
+    font-family: Poppins;
+    letter-spacing: 0.2em;
+}
+.col-sm{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 47px;
+
+    color: #2B463C;
+}
+.btn{
+    background: #05668D;
+    border-radius: 8.73082px;
+}
+.buttonr{
+    margin-right: 150px;
+}
