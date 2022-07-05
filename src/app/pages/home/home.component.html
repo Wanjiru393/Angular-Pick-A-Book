@@ -2,13 +2,10 @@
     <div class="row">
     <div class="col-sm-6">
         <div class="card" style="border:none;">
-            <br>
-            <br>
-            <br>
-            <br>
+            
             <div class="card-body" style="margin-left:0.5px;">
                 <div class="content">
-            <p class="card text" style="font-size:1.5em;font-style:italic;">
+            <p class="card text" style="font-size:1.5em;font-style:italic;border:none;">
     You need it,we've got it!<br>
 Your number 1 supplier of quality affordable books</p>
     <a routerLink="cart">ORDER NOW <i class="bi bi-arrow-right"></i></a>
@@ -19,7 +16,7 @@ Your number 1 supplier of quality affordable books</p>
 
 
     <div class="col-sm-6">
-        <div class="card" style="margin-right:50px">
+        <div class="card" style="margin-right:50px; border:none;">
             <img src="../../assets/img/Group 96.png" style="height:70vh;" alt="">
       </div>
 </div>
@@ -66,7 +63,7 @@ Your number 1 supplier of quality affordable books</p>
 
 <!-- bookbox  -->
 <div class="container mt-4 mb-4">
-<h1 class="text-center">Customers <span class="highlight">Favourites Books</span></h1>
+<h1 class="text-center">Readers <span class="highlight">Favourites</span></h1>
 <div class="row">
 <div class="col-lg-3 mt-3" *ngFor="let fd of bookData;index as i">
     <div class="bookbox" *ngIf="i<=3">
