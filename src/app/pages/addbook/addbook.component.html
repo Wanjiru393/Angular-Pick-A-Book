@@ -1,18 +1,53 @@
-<div class="full-screen" style="padding: 24px">
-    <p>
-      <label>Enter Image Link</label>
-      <input class="w3-input w3-border" [(ngModel)]="inImgLink" />
-    </p>
-    <p>
-      <label>Enter Item Name</label>
-      <input class="w3-input w3-border" [(ngModel)]="inItemName" />
-    </p>
-    <div class="w3-margin-bottom w3-margin-top flex-space-evenly">
-      <button class="w3-button w3-blue w3-round w3-ripple" (click)="SubmitBtn()">
-        Submit
-      </button>
-      <button class="w3-button w3-red w3-round w3-ripple" (click)="ClearBtn()">
-        Clear
-      </button>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Add Book</h2>
+        <br>
+        <img src="../../assets/img/box.png" alt="" width="350px">
+        <img src="../../assets/img/add.png" alt="" class="add">
+      </div>
+      <div class="col">
+        
+        <div class="content-section">
+            <div class="row">
+                <div class="col">
+                    <form method="POST" action="">
+        
+                        <fieldset class="form-group">
+                            <div class="form-group mb-4 row d-flex justify-content-center">
+                                <label for="exampleInputName" class="form-label text-center">Book name</label>
+                                <input type="name" class="form-control" id="exampleInputName" placeholder=" Enter book name" required style="width: 23rem; padding: 10px;">
+                            </div>
+                            <div class="form-group mb-4 row d-flex justify-content-center">
+                                <label for="exampleInputContact" class="form-label text-center">Author name</label>
+                                <input type="contact" class="form-control" id="exampleInputContact" placeholder="Enter author name" required style="width: 23rem; padding: 10px;">
+                            </div>
+                            <div class="form-group mb-4 row d-flex justify-content-center">
+                                <label for="exampleFormControlTextarea1" class="form-label text-center">Example textarea</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required style="width: 23rem;"></textarea>
+                            </div>
+                            <div class="form-group mb-4 row d-flex justify-content-center">
+                                <label for="exampleInputEmail1" class="form-label text-center">Category</label>
+                                <select id="inputState" class="form-control" style="width: 23rem; padding: 10px;">
+                                    <option selected>Choose book category </option>
+                                    <option>...</option>
+                                  </select>
+                            </div> 
+                            <div class="form-group mb-4 row d-flex justify-content-center">
+                                <label for="exampleInputEmail1" class="form-label text-center">Sale Price</label>
+                                <input type="textarea" class="form-control" id="exampleInputLocation" placeholder=" Enter sale price" required style="width: 23rem; padding: 10px;">
+                            </div> 
+                            <div class="text-center">
+                                <button routerLink="/categories"type="button" class="btn btn-primary" style="padding: 10px;">Add Product</button>
+                            </div>   
+                        </fieldset>
+                    </form>
+                </div>
+                </div>   
+            </div>
+      </div>
     </div>
   </div>
+  
