@@ -1,9 +1,12 @@
 .footer{
-    background-color: #903749;
-    padding: 40px 10px;
+    background-color: #903749C2;
+    height: 300px;
     overflow: hidden;
     position: sticky;
-    top: 100%;
+}
+.top{
+    padding-top: 50px;
+    padding-bottom: 0px;
 }
 h1{
     color: #fff;
@@ -17,7 +20,17 @@ a{
 a:hover{
     color: var(--primary-color);
 }
-p{
+p, span{
     color: #fff;
     font-size: 10px;
+}
+.heading{
+    color: white;
+    font-weight: 600;
+}
+.icons{
+    padding-bottom: 10px;
+}
+.list-none{
+    font-size: 15px;
 }

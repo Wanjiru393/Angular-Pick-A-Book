@@ -12,6 +12,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AddbookComponent } from './pages/addbook/addbook.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { PaymentComponent } from './pages/payment/payment.component';
+import { HagglingComponent } from './pages/haggling/haggling.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { ProfileComponent } from './pages/profile/profile.component';
     ContactComponent,
     AddbookComponent,
     CartComponent,
-    ProfileComponent
+    ProfileComponent,
+    CategoriesComponent,
+    PaymentComponent,
+    HagglingComponent
   ],
   imports: [
     BrowserModule,
