@@ -1,0 +1,13 @@
+.parent {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.btn, .line{
+    display: inline-block;
+}
+.btn{
+    background: #05668D;
+}
+.line1{
+    margin-left: 100px;
+}
