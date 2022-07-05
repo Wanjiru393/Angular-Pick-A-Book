@@ -5,3 +5,13 @@
     background: #05668D;
     border-radius: 8.73082px;
 }
+.parent {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.line{
+    display: inline-block;
+}
+.line1{
+    margin-left: 100px;
+}
