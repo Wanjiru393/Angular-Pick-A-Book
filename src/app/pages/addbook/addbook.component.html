@@ -1,10 +1,11 @@
 
 
-<div class="container">
-    <div class="row">
+<div class="container mt-3">
+    <div class="row mt-3">
       <div class="col">
-        <h2>Add Book</h2>
+        <h2 class="mb-4 mt-3">Add Book</h2>
         <br>
+
         <img src="../../assets/img/box.png" alt="" width="350px">
         <img src="../../assets/img/add.png" alt="" class="add">
       </div>
@@ -25,14 +26,14 @@
                                 <input type="contact" class="form-control" id="exampleInputContact" placeholder="Enter author name" required style="width: 23rem; padding: 10px;">
                             </div>
                             <div class="form-group mb-4 row d-flex justify-content-center">
-                                <label for="exampleFormControlTextarea1" class="form-label text-center">Example textarea</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required style="width: 23rem;"></textarea>
+                                <label for="exampleFormControlTextarea1" class="form-label text-center">Book Description</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required style="width: 23rem;" placeholder="Book Description"></textarea>
                             </div>
                             <div class="form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleInputEmail1" class="form-label text-center">Category</label>
                                 <select id="inputState" class="form-control" style="width: 23rem; padding: 10px;">
                                     <option selected>Choose book category </option>
-                                    <option>...</option>
+                                    <option>Fiction</option>
                                   </select>
                             </div> 
                             <div class="form-group mb-4 row d-flex justify-content-center">
@@ -40,7 +41,7 @@
                                 <input type="textarea" class="form-control" id="exampleInputLocation" placeholder=" Enter sale price" required style="width: 23rem; padding: 10px;">
                             </div> 
                             <div class="text-center">
-                                <button routerLink="/categories"type="button" class="btn btn-primary" style="padding: 10px;">Add Product</button>
+                                <button routerLink="/categories"type="button" class="btn btn-primary mb-4" style="padding: 10px;">Add Product</button>
                             </div>   
                         </fieldset>
                     </form>

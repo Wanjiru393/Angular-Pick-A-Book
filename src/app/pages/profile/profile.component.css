@@ -1,0 +1,28 @@
+.track a{
+    text-decoration: none;
+    background-color: #005F73;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+.track a:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.bookbox 
+{
+    padding: 10px 5px;
+} 
+.bookbox img
+{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.bookbox h1 
+{
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
