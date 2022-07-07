@@ -60,13 +60,16 @@
         </div>
     </div>
 </div>
-
-
 <!-- bookbox  -->
 <div class="container mt-5 mb-4">
 <h2 class="text-center">Books On Offer</h2>
 <div class="row">
-<div class="col-lg-3 mt-4" *ngFor="let fd of bookData;index as i">
+    <div *ngFor ="let book of books">
+        <h1></h1>
+    </div>
+
+    <a (click)="loadBooks()" class="btn btn-primary" href="javascript:void(0)" role="button">Books</a>
+<div class="col-lg-3 mt-4" *ngFor="let fd of  as i">
     <div class="bookbox" *ngIf="i<=3">
         <img src="{{fd.bookImg}}" />
         <h1>{{fd.bookName}}</h1>
