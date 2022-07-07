@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StewardService } from 'src/app/steward.service';
 
 @Component({
   selector: 'app-categories',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+all_books:any
+  constructor(
+    private stewardService: StewardService<any, any>,
+
+  ) { }
 
   ngOnInit(): void {
+    this.stewardService.get('all_books/').subscribe((response: any) => {
+
+      if (response) {
+        this.all_books=response
+        console.log(this.all_books);
+        
+
+  
+      }
+    })
   }
 
 }

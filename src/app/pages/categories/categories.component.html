@@ -29,115 +29,25 @@
                   <!-- Closing div -->
                   <!-- Content -->
             </div>
-            <div class="col">
+            <div class="col" *ngFor="let book of all_books">
                 <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ad itaque amet impedit exercitationem obcaecati quod vel et necessitatibus debitis. Tempora consequuntur, fugiat eos neque suscipit assumenda ex distinctio corrupti?</p> -->
                 <section class="text-gray-600 body-font">
                   <div class="container px-5 py-24 mx-auto">
                     <div class="flex flex-wrap -m-4">
                       <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
                         <a class="block relative h-48 rounded overflow-hidden">
-                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../../assets/img/book.png">
+                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://res.cloudinary.com/hanancodes/{{book.book_image}}">
                         </a>
                         <div class="mt-4">
-                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Title</h3>
-                          <h6 class="text-gray-900 title-font text-lg font-medium">By: Author</h6>
+                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{book.title}}</h3>
+                          <h6 class="text-gray-900 title-font text-lg font-medium">By: {{book.author}}</h6>
                           <div class="parent">
-                            <p class="mt-1 line">$cost</p>
+                            <p class="mt-1 line">{{book.price}}</p>
                             <img src="../../assets/img/bag.png" alt="" width="20" height="20" class="line line1">
                           </div> 
                         </div>
                       </div>
-                      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                        <a class="block relative h-48 rounded overflow-hidden">
-                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../../assets/img/book.png">
-                        </a>
-                        <div class="mt-4">
-                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Title</h3>
-                          <h6 class="text-gray-900 title-font text-lg font-medium">By: Author</h6>
-                          <div class="parent">
-                            <p class="mt-1 line">$cost</p>
-                            <img src="../../assets/img/bag.png" alt="" width="20" height="20" class="line line1">
-                          </div>                       
-                        </div>
-                      </div>
-                      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                        <a class="block relative h-48 rounded overflow-hidden">
-                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../../assets/img/book.png">
-                        </a>
-                        <div class="mt-4">
-                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Title</h3>
-                          <h6 class="text-gray-900 title-font text-lg font-medium">By: Author</h6>
-                          <div class="parent">
-                            <p class="mt-1 line">$cost</p>
-                            <img src="../../assets/img/bag.png" alt="" width="20" height="20" class="line line1">
-                          </div>                         
-                        </div>
-                      </div>
-                      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                        <a class="block relative h-48 rounded overflow-hidden">
-                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../../assets/img/book.png">
-                        </a>
-                        <div class="mt-4">
-                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Title</h3>
-                          <h6 class="text-gray-900 title-font text-lg font-medium">By: Author</h6>
-                          <div class="parent">
-                            <p class="mt-1 line">$cost</p>
-                            <img src="../../assets/img/bag.png" alt="" width="20" height="20" class="line line1">
-                          </div>                       
-                        </div>
-                      </div>
-                      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                        <a class="block relative h-48 rounded overflow-hidden">
-                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../../assets/img/book.png">
-                        </a>
-                        <div class="mt-4">
-                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Title</h3>
-                          <h6 class="text-gray-900 title-font text-lg font-medium">By: Author</h6>
-                          <div class="parent">
-                            <p class="mt-1 line">$cost</p>
-                            <img src="../../assets/img/bag.png" alt="" width="20" height="20" class="line line1">
-                          </div> 
-                          </div>
-                      </div>
-                      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                        <a class="block relative h-48 rounded overflow-hidden">
-                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../../assets/img/book.png">
-                        </a>
-                        <div class="mt-4">
-                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Title</h3>
-                          <h6 class="text-gray-900 title-font text-lg font-medium">By: Author</h6>
-                          <div class="parent">
-                            <p class="mt-1 line">$cost</p>
-                            <img src="../../assets/img/bag.png" alt="" width="20" height="20" class="line line1">
-                          </div>                     
-                        </div>
-                      </div>
-                      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                        <a class="block relative h-48 rounded overflow-hidden">
-                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../../assets/img/book.png">
-                        </a>
-                        <div class="mt-4">
-                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Title</h3>
-                          <h6 class="text-gray-900 title-font text-lg font-medium">By: Author</h6>
-                          <div class="parent">
-                            <p class="mt-1 line">$cost</p>
-                            <img src="../../assets/img/bag.png" alt="" width="20" height="20" class="line line1">
-                          </div>                       
-                        </div>
-                      </div>
-                      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                        <a class="block relative h-48 rounded overflow-hidden">
-                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../../assets/img/book.png">
-                        </a>
-                        <div class="mt-4">
-                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Title</h3>
-                          <h6 class="text-gray-900 title-font text-lg font-medium">By: Author</h6>
-                          <div class="parent">
-                            <p class="mt-1 line">$cost</p>
-                            <img src="../../assets/img/bag.png" alt="" width="20" height="20" class="line line1">
-                          </div> 
-                        </div>
-                      </div>
+
                     </div>
                   </div>
                 </section>

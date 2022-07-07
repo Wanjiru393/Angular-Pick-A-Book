@@ -14,14 +14,14 @@
                         </div>
                     </div>
                 </div>
-                <form method="POST" action="" [formGroup]="loginForm">    
+                <form (ngSubmit)="onLoggedin()" class="box" #loginForm="ngForm" role="form">    
                     <div class="col-sm-8 mt-4">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="text" formControlName="username" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" required>
+                        <label for="exampleInputEmail1" class="form-label">Username</label>
+                        <input type="text" class="form-control form-control-lg"[(ngModel)]="login.username" name="username" aria-describedby="emailHelp" placeholder="Username" required>
                     </div>
                     <div class="col-sm-8 mt-4">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" formControlName="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Enter your password" required>
+                        <input type="password" name="password" class="form-control form-control-lg" id="exampleInputPassword1"[(ngModel)]="login.password" placeholder="Enter your password" required>
                         <div class="mt-2">
                             <small class="text-muted text-center">
                                 <a class="ml-2 float-right" href="#" style="text-decoration: none;color: #005F73;">Forgot Password?</a>
@@ -33,7 +33,7 @@
                         <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
                     </div>
                     <div class="d-grid col-5 mt-5 pl-12">
-                        <button (click)="loginUser()" class="btn btn-lg" style="background-color:#005F73;color:white">Login</button>
+                        <button type="submit" class="btn btn-lg" style="background-color:#005F73;color:white">Login</button>
                     </div>
 
                     <div class="col"></div>
