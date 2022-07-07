@@ -17,6 +17,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { PaymentComponent } from './pages/payment/payment.component';
 import { HagglingComponent } from './pages/haggling/haggling.component';
+import {StewardService} from './steward.service';
+import { HttpClient } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +41,7 @@ import { HagglingComponent } from './pages/haggling/haggling.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     HttpClientModule,
 
