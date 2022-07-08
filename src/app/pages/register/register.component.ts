@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder ,FormControl } from '@angular/forms';
+import { StewardService } from 'src/app/steward.service';
+import { Register } from 'src/app/wrapper/register';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  register!: Register;
+  constructor(private fb:FormBuilder,
+private stewardService: StewardService<any, any>,
+public router: Router,
+
+  ) {
+    this.register = new Register();
+   }
 
   ngOnInit(): void {
   }
