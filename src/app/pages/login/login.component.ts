@@ -28,6 +28,8 @@ public router: Router,
     this.stewardService.postNotoken('api/token/', this.login).subscribe((response: any) => {
     if(response){
     localStorage.setItem('access_token', response.access);
+    localStorage.setItem('username', this.login.username);
+
     localStorage.setItem('isLoggedin', 'true');
     this.router.navigate(['']);
     
