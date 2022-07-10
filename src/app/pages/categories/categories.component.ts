@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { BookdetailsService } from 'src/app/service/bookdetails.service';
+
+import { StewardService } from 'src/app/steward.service';
+
+
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -7,11 +12,23 @@ import { BookdetailsService } from 'src/app/service/bookdetails.service';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor(private service:BookdetailsService) { }
-  bookData:any;
+all_books:any
+  constructor(
+    private stewardService: StewardService<any, any>,
+
+  ) { }
 
   ngOnInit(): void {
-    this.bookData = this.service.bookDetails;
+    this.stewardService.get('all_books/').subscribe((response: any) => {
+
+      if (response) {
+        this.all_books=response
+        console.log(this.all_books);
+        
+
+  
+      }
+    })
   }
 
 }

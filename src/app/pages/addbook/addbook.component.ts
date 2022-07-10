@@ -1,31 +1,34 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { BookdetailsService } from 'src/app/service/bookdetails.service';
+
+import { StewardService } from 'src/app/steward.service';
+
 
 @Component({
-  selector: 'app-addbook',
+  selector: 'addbook',
   templateUrl: './addbook.component.html',
   styleUrls: ['./addbook.component.css']
 })
 export class AddbookComponent implements OnInit {
-  inImgLink = '';
-  inItemName = '';
 
-  @Output() newItem = new EventEmitter();
+all_books:any
+  constructor(
+    private stewardService: StewardService<any, any>,
 
-  constructor() { }
-
-  ClearBtn = () => {
-    this.inImgLink = '';
-    this.inItemName = '';
-  };
-
-  SubmitBtn = () =>{
-    if (this.inImgLink === '' || this.inItemName === ''){
-      return;
-    }
-    this.newItem.emit({ name: this.inItemName, img: this.inImgLink});
-  };
+  ) { }
 
   ngOnInit(): void {
+    this.stewardService.get('create_books/').subscribe((response: any) => {
+
+      if (response) {
+        this.all_books=response
+        console.log(this.all_books);
+        
+
+  
+      }
+    })
   }
 
 }

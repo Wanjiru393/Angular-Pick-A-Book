@@ -9,13 +9,5 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent{
   constructor(private http: HttpClient) {}
-  books = [];
-
-  loadBooks() {
-    this.http.get('https://localhost:44393/api/books/').subscribe((response) => {
-      alert(JSON.stringify(response));
-    });
-  }
   
-
 }
