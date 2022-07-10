@@ -1,48 +1,84 @@
+
 /* .py-24{
     padding-top: 0px!important;
+
+.image{
+    width: 100%;
+    height: 100%;
+} 
+
+.py-24{
+    padding-top: 0px;
+
 }
+.divide{
+    width: 200px;
+    margin-right: 0px!important;
+}
+
 .btn{
     background: #05668D;
     border-radius: 8.73082px;
 }
-.parent {
-    white-space: nowrap;
-    overflow-x: auto;
+.btn2{
+    width: 120px;
+    margin-left: 500px;    
 }
-.line{
-    display: inline-block;
+body {
+    background-color: #fbfbfb;
+  } 
+  @media (min-width: 991.98px) {
+    main {
+      padding-left: 300px;
+    }
+  }
+  
+  /* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 260px;
+    z-index: 600;
+    padding-top: 80px;
+    margin-right: 200px;
+    padding-left: 70px;
+  }
+.bodycol{
+    margin-left: 160px;
+}  
+.px-5{
+    padding: 5px!important
 }
-.line1{
-    margin-left: 100px;
-}
+  
+   @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  } 
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+  } 
+.postion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 300px; 
+    width:300px; 
+}  
+ 
 .form-check{
     padding-top:10px;
-} */
-.bookbox 
-{
-    padding: 10px 10px;
-} 
-.bookbox img
-{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-.bookbox h1 
-{
-    font-size: 18px;
-    margin-top: 20px;
-    font-weight: bold;
-}
-.buybtn
-{
-
-    color: #000;
-    background-color: var(--primary-color);
-    padding: 10px 10px;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+}   

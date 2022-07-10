@@ -1,11 +1,18 @@
-.add{
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image2 {
     position: absolute;
-    width: 98px;
-    height: 98px;
-    left: 210px;
-    top: 260px;
-
-}
+    top: 210px;
+    left: 125px;
+  }
 .btn{
     background: #05668D;
 }
