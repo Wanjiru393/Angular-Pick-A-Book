@@ -1,15 +1,22 @@
+
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl,FormBuilder,NgForm,Validator, Validators }  from '@angular/forms';
 import { Router } from '@angular/router';
 import { StewardService } from 'src/app/steward.service';
 import { Books } from 'src/app/wrapper/books';
+import { BookdetailsService } from 'src/app/service/bookdetails.service';
+
+
+
+
 
 @Component({
-  selector: 'app-addbook',
+  selector: 'addbook',
   templateUrl: './addbook.component.html',
   styleUrls: ['./addbook.component.css']
 })
 export class AddbookComponent implements OnInit {
+
   inImgLink = '';
   inItemName = '';
   model!:Books;
@@ -83,6 +90,25 @@ export class AddbookComponent implements OnInit {
       }
     })
     
+
+
+all_books:any
+  constructor(
+    private stewardService: StewardService<any, any>,
+
+  ) { }
+
+  ngOnInit(): void {
+    this.stewardService.get('create_books/').subscribe((response: any) => {
+
+      if (response) {
+        this.all_books=response
+        console.log(this.all_books);
+        
+
+  
+      }
+    })
 
   }
   bookCover(event:any){
