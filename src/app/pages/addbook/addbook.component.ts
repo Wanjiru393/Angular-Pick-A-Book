@@ -1,22 +1,14 @@
-
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl,FormBuilder,NgForm,Validator, Validators }  from '@angular/forms';
 import { Router } from '@angular/router';
 import { StewardService } from 'src/app/steward.service';
 import { Books } from 'src/app/wrapper/books';
-import { BookdetailsService } from 'src/app/service/bookdetails.service';
-
-
-
-
-
 @Component({
-  selector: 'addbook',
+  selector: 'app-addbook',
   templateUrl: './addbook.component.html',
   styleUrls: ['./addbook.component.css']
 })
 export class AddbookComponent implements OnInit {
-
   inImgLink = '';
   inItemName = '';
   model!:Books;
@@ -25,16 +17,13 @@ export class AddbookComponent implements OnInit {
   users:any
   categories:any;
   @Output() newItem = new EventEmitter();
-
   constructor(
     private stewardService: StewardService<any, any>,
     private fb:FormBuilder,
     private router:Router,
-
   ) {
     this.model=new Books();
    }
-
   ClearBtn = () => {
     this.inImgLink = '';
     this.inItemName = '';
@@ -45,7 +34,6 @@ export class AddbookComponent implements OnInit {
     }
     this.newItem.emit({ name: this.inItemName, img: this.inImgLink});
   };
-
   ngOnInit(): void {
     this.Books=this.fb.group({
       title:["",Validators.required],
@@ -62,54 +50,24 @@ export class AddbookComponent implements OnInit {
     //   if(event.target.files.length>0){
     //     const file=event.target.files[0]
     //     this.Books.get['file'].set(file)
-
     //   }
-
     // }
-  
     this.username=localStorage.getItem('username')
-    
-
     this.stewardService.get("all_categories/").subscribe((response) => {
       if(response){
         this.categories=response
-        
       }
     })
-
     this.stewardService.get("all_users/?username="+this.username).subscribe((response) => {
       if(response){
         response.forEach((user:any) => {
             console.log(user.id);
             this.Books.patchValue({
               user:user.id
-              
             })
-                            
-        })                
+        })
       }
     })
-    
-
-
-all_books:any
-  constructor(
-    private stewardService: StewardService<any, any>,
-
-  ) { }
-
-  ngOnInit(): void {
-    this.stewardService.get('create_books/').subscribe((response: any) => {
-
-      if (response) {
-        this.all_books=response
-        console.log(this.all_books);
-        
-
-  
-      }
-    })
-
   }
   bookCover(event:any){
      if(event.target.files.length>0){
@@ -117,7 +75,6 @@ all_books:any
         // this.Books.get('book_image').setValue(file)
         this.Books.patchValue({
           book_image:file
-
         })
         // this.Books.setValue({
         //   book_image: file
@@ -132,22 +89,12 @@ all_books:any
     // // this.model.book_image=this.Books.value.book_image
     // this.model.category=this.Books.value.category
     // this.model.price=this.Books.value.price
-    
     this.model=this.Books.value
-
     this.stewardService.postFormDataMultipart('create_books/',this.model).subscribe((response:any)=>{
-
       if(response){
         console.log(response);
         this.router.navigate(['categories']);
-
-        
       }
     })
-
-
   }
-
-
     }
-
