@@ -5,22 +5,30 @@
                 <div class="ml-5 mt-2">
                     <h1>Register</h1>
                 </div>
-                <form method="POST" action="">
+                <form (ngSubmit)="onRegister()" class="box" #registerForm="ngForm" role="form">
                         <div class="col-sm-8 mt-4">
-                            <label for="exampleInputName" class="form-label">Your Name</label>
-                            <input type="name" name="name" class="form-control form-control-lg" id="exampleInputName" placeholder=" Enter your name" required>
+                            <label for="exampleInputName" class="form-label">Username</label>
+                            <input type="name" class="form-control form-control-lg" [(ngModel)]="register.username" name="username" id="exampleInputName" placeholder=" Enter Username" required>
                         </div>
                         <div class="col-sm-8 mt-4">
-                            <label for="exampleInputContact" class="form-label">Username</label>
-                            <input type="contact" name="username" class="form-control form-control-lg" id="exampleInputContact" placeholder="Enter Username" required>
+                            <label for="exampleInputContact" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control form-control-lg" [(ngModel)]="register.password" id="exampleInputPassword1" placeholder="Enter Password" required>
                         </div>
                         <div class="col-sm-8 mt-4">
-                            <label for="exampleInputEmail1" class="form-label">Email Address</label>
-                            <input type="email" name="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" Enter your email address" required>
+                            <label for="exampleInputEmail1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control form-control-lg" [(ngModel)]="register.password2" name="password2" id="exampleInputPassword2" aria-describedby="emailHelp" placeholder=" Confirm Password" required>
                         </div>
                         <div class="col-sm-8 mt-4">
-                            <label for="exampleInputPassword1" class="form-label">Create Password</label>
-                            <input type="password" name="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Create Password" required>
+                            <label for="exampleInputName" class="form-label">First Name</label>
+                            <input type="name" class="form-control form-control-lg" [(ngModel)]="register.first_name" name="first_name" id="exampleInputName1" placeholder="Enter Your firstName" required>
+                        </div>
+                        <div class="col-sm-8 mt-4">
+                            <label for="exampleInputName" class="form-label">Last Name</label>
+                            <input type="name" class="form-control form-control-lg" [(ngModel)]="register.last_name" name="last_name" id="exampleInputName2" placeholder="Enter Your lastName" required>
+                        </div>
+                        <div class="col-sm-8 mt-4">
+                            <label for="exampleInputName" class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-lg" [(ngModel)]="register.email" name="email" id="exampleInputEmail" placeholder="Enter Your Email Address" required>
                         </div>
                         <div class="col-sm-8 mt-4">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
