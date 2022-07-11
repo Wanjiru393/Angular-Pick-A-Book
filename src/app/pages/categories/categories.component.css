@@ -1,25 +1,4 @@
 
-
-/* .py-24{
-    padding-top: 0px!important;
-
-.image{
-    width: 100%;
-    height: 100%;
-} 
-
- /* .image{
-    width: 13622px;
-    height: 192px;
-}  */
-
-
-/* .py-24{
-    padding-top: 0px;
-
-
-
-} */
 .title{
   color: #000000;
   font-weight: 500;
@@ -54,66 +33,12 @@
     width: 120px;
     margin-left: 400px;    
 }
-/*body {
-    background-color: #fbfbfb;
-  } 
-  @media (min-width: 991.98px) {
-    main {
-      padding-left: 300px;
-    }
-  }
-   */
-  /* Sidebar */
-/* .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-    width: 260px;
-    z-index: 600;
-    padding-top: 80px;
-    margin-right: 200px;
-    padding-left: 70px;
-  }  
-.px-5{
-    padding: 5px!important
-}
-  
-   @media (max-width: 991.98px) {
-    .sidebar {
-      width: 100%;
-    }
-  }
-  .sidebar .active {
-    border-radius: 5px;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
-  } 
-  
-  .sidebar-sticky {
-    position: relative;
-    top: 0;
-    height: calc(100vh - 48px);
-    padding-top: 0.5rem;
-    overflow-x: hidden; 
-    overflow-y: auto; 
-  } 
-.postion {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-height: 300px; 
-    width:300px; 
-}  
-     */
+
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #F5F5F5;
  }
- /* .bodycol{
-  margin-left: 20px;
-}   */
 .card{
   background-color: #FFFFFF;
 }
@@ -138,7 +63,7 @@ a:focus{
     background: #fff;
     border:none;
     border-radius: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 .navbar-btn{
@@ -155,16 +80,16 @@ a:focus{
 }
 
 .wrapper{
-    display: flex;
+    
     width:100%;
-    align-items:stretch; 
+    align-items: ce; 
 }
 #sidebar{
     min-width:250px;
     max-width: 250px;
     color:rgb(9, 9, 9);
     transition: all 0.3s;
-    padding-top: 40px;
+    padding-top: 25px;
 }
 #sidebar.active{
     margin-left:-250px;

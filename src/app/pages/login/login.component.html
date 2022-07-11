@@ -1,97 +1,4 @@
-    <!-- <div class="content-section login">
-        <div class="row" style="background-color:#E845451A;">
-            
-            <div class="col align-self-md-center" style=" margin-left: 230px;">
-                <div class="ml-2">
-                    <h1>Login</h1>
-                </div>
-                <div class="row pt-3">
-                    <div class="col">
-                        <div class="mt-2">
-                            <small class="text-muted text-center">
-                                Don't have an account? <a class="ml-2" routerLink="/register" type="button" style="text-decoration: none;color: #005F73;">Create Account</a>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                <form (ngSubmit)="onLoggedin()" class="box" #loginForm="ngForm" role="form">    
-                    <div class="col-sm-8 mt-4">
-                        <label for="exampleInputEmail1" class="form-label">Username</label>
-                        <input type="text" class="form-control form-control-lg"[(ngModel)]="login.username" name="username" aria-describedby="emailHelp" placeholder="Username" required>
-                    </div>
-                    <div class="col-sm-8 mt-4">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" name="password" class="form-control form-control-lg" id="exampleInputPassword1"[(ngModel)]="login.password" placeholder="Enter your password" required>
-                        <div class="mt-2">
-                            <small class="text-muted text-center">
-                                <a class="ml-2 float-right" href="#" style="text-decoration: none;color: #005F73;">Forgot Password?</a>
-                            </small>
-                        </div>
-                    </div>
-                    <div class="mb-4 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
-                    </div>
-                    <div class="d-grid col-5 mt-5 pl-12">
-                        <button type="submit" class="btn btn-lg" style="background-color:#005F73;color:white">Login</button>
-                    </div>
 
-                    <div class="col"></div>
-                     
-                </form>
-            </div>
-            <div class="col">
-                <img src="../../assets/img/Group 1.jpg" style="width: 100%; height:100%"/>
-            </div>
-                
-        </div>
-    </div>
- -->
- <!-- <div class="container-fluid ps-md-0">
-
-    <div class="row g-0">
-      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-      <div class="col-md-8 col-lg-6">
-        <div class="login d-flex align-items-center py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-9 col-lg-8 mx-auto">
-                <h3 class="login-heading mb-4" style="font-weight: bold;">Log In</h3>
-  
-                <form (ngSubmit)="onLoggedin()" class="box" #loginForm="ngForm" role="form">
-                  <div class="form-floating mb-3">
-                    <input type="email" [(ngModel)]="login.username" name="username" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="password" [(ngModel)]="login.password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                  </div>
-                  <div class="text-center form-check mb-3">
-                    <a class="small spandesign" href="#">Forgot password?</a>
-                  </div>
-  
-                  <div class="form-check mb-3">
-                    <input class="form-check-input"  style="background-color: #3A6351;" type="checkbox" value="" id="rememberPasswordCheck">
-                    <label class="form-check-label"  for="rememberPasswordCheck">
-                      I agree to terms and condition
-                    </label>
-                  </div>
-  
-                  <div class="d-grid form mb-3">
-                    <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
-                    <div class="text-center">
-                    </div>
-                  </div>
-           
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <div class="row g-0">
     <div class="col-md-8 col-lg-6 signup">
       <div class="login d-flex align-items-center py-5 plusafya">
@@ -103,18 +10,15 @@
               <form (ngSubmit)="onLoggedin()" class="box" #loginForm="ngForm" role="form">
                 <div class="form-floating mb-3">
                   <input type="email" [(ngModel)]="login.username" name="username" class="form-control" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput">Email address</label>
+                  <label for="floatingInput">username</label>
                 </div>
                 <div class="form-floating mb-3">
                   <input type="password" [(ngModel)]="login.password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
                   <label for="floatingPassword">Password</label>
                 </div>
-                <!-- <div class="text-center form-check mb-3">
-                  <a class="small spandesign" href="#">Forgot password?</a>
-                </div> -->
 
                 <div class="form-check mb-3">
-                  <input class="form-check-input"  style="background-color: #3A6351;" type="checkbox" value="" id="rememberPasswordCheck">
+                  <input class="form-check-input"  style="background-color: #005F73;" type="checkbox" value="" id="rememberPasswordCheck">
                   <label class="form-check-label"  for="rememberPasswordCheck">
                     I agree to terms and condition
                   </label>
@@ -125,16 +29,13 @@
                   <div class="text-center">
                   </div>
                 </div>
+                <div class="mb-12 mt-3 ml-5">
+                    <small class="text-muted float-left">
+                        Don't have an Account? <a class="ml-2" routerLink="/register" type="button" style="text-decoration: none;color: #005F73;">Create Account</a>
+                    </small>
+                </div>
          
               </form>
-              <!-- <p class="d-flex justify-content-center align-content-center">New to the site?</p>
-              <a href="{%url 'register'%}" class="d-flex justify-content-center align-content-center"> Register</a> -->
-
-              <!-- <a href="{% url 'register'%}"><button class="btn btn-success form-control  signin_reg" type="submit">Create Account</button>
-              </a> -->
-
-                <!-- <small>Need an account ? <a href="">Sign Up</a></small>
-                <p><small> <a href="">Return to home</a></small></p>  -->
             </div>
           </div>
         </div>

@@ -1,57 +1,68 @@
-    <div class="content-section login">
-        <div class="row" style="background-color:#E845451A;">
-            
-            <div class="col align-self-md-center" style=" margin-left: 230px;">
-                <div class="ml-5 mt-2">
-                    <h1>Register</h1>
-                </div>
-                <form (ngSubmit)="onRegister()" class="box" #registerForm="ngForm" role="form">
-                        <div class="col-sm-8 mt-4">
-                            <label for="exampleInputName" class="form-label">Username</label>
-                            <input type="name" class="form-control form-control-lg" [(ngModel)]="register.username" name="username" id="exampleInputName" placeholder=" Enter Username" required>
-                        </div>
-                        <div class="col-sm-8 mt-4">
-                            <label for="exampleInputContact" class="form-label">Password</label>
-                            <input type="password" name="password" class="form-control form-control-lg" [(ngModel)]="register.password" id="exampleInputPassword1" placeholder="Enter Password" required>
-                        </div>
-                        <div class="col-sm-8 mt-4">
-                            <label for="exampleInputEmail1" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control form-control-lg" [(ngModel)]="register.password2" name="password2" id="exampleInputPassword2" aria-describedby="emailHelp" placeholder=" Confirm Password" required>
-                        </div>
-                        <div class="col-sm-8 mt-4">
-                            <label for="exampleInputName" class="form-label">First Name</label>
-                            <input type="name" class="form-control form-control-lg" [(ngModel)]="register.first_name" name="first_name" id="exampleInputName1" placeholder="Enter Your firstName" required>
-                        </div>
-                        <div class="col-sm-8 mt-4">
-                            <label for="exampleInputName" class="form-label">Last Name</label>
-                            <input type="name" class="form-control form-control-lg" [(ngModel)]="register.last_name" name="last_name" id="exampleInputName2" placeholder="Enter Your lastName" required>
-                        </div>
-                        <div class="col-sm-8 mt-4">
-                            <label for="exampleInputName" class="form-label">Email</label>
-                            <input type="email" class="form-control form-control-lg" [(ngModel)]="register.email" name="email" id="exampleInputEmail" placeholder="Enter Your Email Address" required>
-                        </div>
-                        <div class="col-sm-8 mt-4">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">I agree to terms & conditions</label>
-                        </div>
-                        <div class="d-grid col-5 mt-3 pl-12">
-                            <button routerLink= "login" type="submit" class="btn btn-lg" style="background-color:#005F73;color:white">Register</button>
-                        </div>
-                       
-                        <div class="mb-12 mt-3 ml-5">
-                            <small class="text-muted float-left">
-                                Already have an account? <a class="ml-2" routerLink="/login" type="button" style="text-decoration: none;color: #005F73;">Login</a>
-                            </small>
-                        </div>
-                       
-                    <div class="col"></div>
-                    
-                </form>
-            </div>
-            <div class="col">
-                <img src="../../assets/img/Group 84.jpg" style="width: 100%; height:100%"/>
-            </div>
-                
-        </div>
-    </div>
 
+<div class="row g-0">
+    <div class="col-md-8 col-lg-6 signup">
+      <div class="login d-flex align-items-center py-5 plusafya">
+        <div class="container">
+          <div class="row ">
+            <div class="col-md-9 col-lg-8   mx-auto ">
+              <!-- <p class="h2 my-5 afya">Welcome to AfyaPlus</p> -->
+              <h3 class="login-heading mb-4" >Register</h3>
+
+              <form (ngSubmit)="onRegister()" class="box" #registerForm="ngForm" role="form">
+                <div class="form-floating mb-3">
+                  <input type="name" class="form-control form-control-lg" [(ngModel)]="register.username" name="username" id="exampleInputName" placeholder="username" required>
+                  <label for="floatingInput">username</label>
+                </div>
+                <div class="form-floating mb-3">
+                <input type="password" name="password" class="form-control form-control-lg" [(ngModel)]="register.password" id="exampleInputPassword1" placeholder="password" required>
+                  <label for="floatingPassword">Password</label>
+                </div>
+                <div class="form-floating mb-3">
+                <input type="password" class="form-control form-control-lg" [(ngModel)]="register.password2" name="password2" id="exampleInputPassword2" aria-describedby="emailHelp" placeholder="confirm password" required>
+                  <label for="floatingPassword">Confirm Password</label>
+                </div>
+                <div class="form-floating mb-3">
+                <input type="name" class="form-control form-control-lg" [(ngModel)]="register.first_name" name="first_name" id="exampleInputName1" placeholder="firstname" required>
+                  <label for="floatingPassword">First Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                <input type="name" class="form-control form-control-lg" [(ngModel)]="register.last_name" name="first_name" id="exampleInputName1" placeholder="lastname" required>
+                  <label for="floatingPassword">Last Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                <input type="email" class="form-control form-control-lg" [(ngModel)]="register.email" name="email" id="exampleInputEmail" placeholder="email address" required>
+                  <label for="floatingPassword">Email Address</label>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input class="form-check-input"  style="background-color: #005F73;" type="checkbox" value="" id="rememberPasswordCheck">
+                  <label class="form-check-label"  for="rememberPasswordCheck">
+                    I agree to terms and condition
+                  </label>
+                </div>
+                <div class="d-grid form mb-3">
+                    <button routerLink= "/login" type="submit" class="btn btn-lg fw-bold mb-2" style="background-color:#005F73;color:white">Register</button>
+                </div>
+
+                <div class="mb-12 mt-3 ml-5">
+                    <small class="text-muted float-left">
+                        Already have an account? <a class="ml-2" routerLink="/login" type="button" style="text-decoration: none;color: #005F73;">Login</a>
+                    </small>
+                </div>
+         
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image ">
+    </div>
+   
+  </div>
+   
+   
+   
+   
+   
+   

@@ -3,8 +3,9 @@ form input{
 }
 .bg-image {
     background-image: url('/assets/img/Group 1.jpg');
-    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: 995px 800px;
   }
   
   .login-heading {
@@ -15,7 +16,7 @@ form input{
     font-size: 0.9rem;
     letter-spacing: 0.05rem;
     padding: 0.75rem 1rem;
-    background-color: #3A6351;
+    background-color: #005F73;
   }
   .login {
     min-height: 100vh;
