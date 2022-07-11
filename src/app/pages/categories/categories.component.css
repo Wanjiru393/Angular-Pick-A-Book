@@ -1,4 +1,5 @@
 
+
 /* .py-24{
     padding-top: 0px!important;
 
@@ -7,13 +8,42 @@
     height: 100%;
 } 
 
-.py-24{
+ /* .image{
+    width: 13622px;
+    height: 192px;
+}  */
+
+
+/* .py-24{
     padding-top: 0px;
+
+
+
+} */
+.title{
+  color: #000000;
+  font-weight: 500;
+  font-size: 17px;
+}
+.author{
+  color: #E48257;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 17px;
 
 }
 .divide{
-    width: 200px;
-    margin-right: 0px!important;
+    width: 100px;
+}
+
+.py-24{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.px-5{
+  padding-right: 1rem!important;
+  padding-left: 1rem!important;
+  height: 400px;
 }
 
 .btn{
@@ -22,9 +52,9 @@
 }
 .btn2{
     width: 120px;
-    margin-left: 500px;    
+    margin-left: 400px;    
 }
-body {
+/*body {
     background-color: #fbfbfb;
   } 
   @media (min-width: 991.98px) {
@@ -32,9 +62,9 @@ body {
       padding-left: 300px;
     }
   }
-  
+   */
   /* Sidebar */
-.sidebar {
+/* .sidebar {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -45,10 +75,7 @@ body {
     padding-top: 80px;
     margin-right: 200px;
     padding-left: 70px;
-  }
-.bodycol{
-    margin-left: 160px;
-}  
+  }  
 .px-5{
     padding: 5px!important
 }
@@ -78,7 +105,152 @@ body {
     min-height: 300px; 
     width:300px; 
 }  
- 
+     */
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F5F5;
+ }
+ /* .bodycol{
+  margin-left: 20px;
+}   */
+.card{
+  background-color: #FFFFFF;
+}
 .form-check{
-    padding-top:10px;
-}   
+  padding-left:50px;
+} 
+ p{
+     font-size: 1.1em;
+     font-weight: 300;
+     line-height: 1.7em;
+     color:#999;
+ }
+a,
+a:hover,
+a:focus{
+    color:inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.navbar{
+    padding:15px 10px;
+    background: #fff;
+    border:none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+.navbar-btn{
+    box-shadow: none;
+    outline:none !important;
+    border:none;
+}
+.line{
+    display: inline-block;
+}
+
+.bag{
+  margin-left: 90px;
+}
+
+.wrapper{
+    display: flex;
+    width:100%;
+    align-items:stretch; 
+}
+#sidebar{
+    min-width:250px;
+    max-width: 250px;
+    color:rgb(9, 9, 9);
+    transition: all 0.3s;
+    padding-top: 40px;
+}
+#sidebar.active{
+    margin-left:-250px;
+}
+#sidebar .sidebar-header{
+    padding:20px;
+    padding-bottom: 0px;
+}
+#sidebar ul.components{
+    padding:20px 0px;
+    border-bottom:1px solid #47748b;
+}
+#sidebar ul p{
+    padding:10px;
+    font-size:1.1em;
+    display: block;
+    color:#fff;
+}
+#sidebar ul li a{
+    padding:10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover{
+    color:#fff;
+    background: #318fb5;
+}
+#sidebar ul li.active>a,
+a[aria-expanded="true"]{
+    color:#fff;
+    background: #318fb5;
+}
+a[data-toggle="collapse"]{
+    position: relative;
+}
+.dropdown-toggle::after{
+    display: block;
+    position: absolute;
+    top:50%;
+    right:20px;
+    transform: translateY(-50%);
+}
+ul ul a{
+    font-size:0.9em !important;
+    padding-left: 30px !important;
+    background: #318fb5;
+}
+ul.CTAs{
+    padding:20px;
+}
+ul.CTAs a{
+    text-align: center;
+    font-size:0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom:5px;
+}
+
+#content{
+    width:100%;
+    padding:20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+.content-wrapper{
+    padding:15px;
+    padding-top: 60px!important;
+}
+
+@media(maz-width:768px){
+    #sidebar{margin-left:-250px;}
+    #sidebar.active{
+        margin-left:0px;
+    }
+    #sidebarCollapse span{
+        display:none;
+    }
+}
+
+.parent{
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+
+
+
