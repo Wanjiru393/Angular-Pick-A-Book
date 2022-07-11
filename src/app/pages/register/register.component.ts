@@ -23,4 +23,19 @@ public router: Router,
   ngOnInit(): void {
   }
 
+  onRegister() {
+    const params = new URLSearchParams();
+    this.stewardService.postNotoken('register_user/', this.register).subscribe((response: any) => {
+    if(response){
+    localStorage.setItem('access_token', response.access);
+    localStorage.setItem('username', this.register.username);
+
+    localStorage.setItem('isRegister', 'true');
+    this.router.navigate(['']);
+    
+    }
+    });
+
+  }
+
 }
