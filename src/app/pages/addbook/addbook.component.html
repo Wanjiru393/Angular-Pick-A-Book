@@ -2,41 +2,40 @@
 
 <div class="container mt-3">
     <div class="row mt-3">
-      <div class="col parent">
-        <h2 class="mb-4 mt-3">Add Book</h2>
-        <br>
-        <img src="../../assets/img/box.png" alt="" width="350px" class="image1">
-        <img src="../../assets/img/add.png" alt="" class="image2">
-      </div>
+      <!-- <div class="col parent">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad at aspernatur, reiciendis explicabo blanditiis ratione atque fugiat saepe nam porro error! Nihil porro illo perspiciatis nisi ipsam, beatae assumenda accusantium.</p>
+
+        
+      </div> -->
       <div class="col">
         
         <div class="content-section">
             <div class="row">
-                <div class="col">
+                <div class="col column">
                     <form [formGroup]="Books" #form="ngForm" (ngSubmit)="onCreateBooks()" role="form" action=""  >
         
                         <fieldset class="form-group">
-                            <div class="form-group mb-4 row d-flex justify-content-center">
+                            <div class="left form-group mb-4 row d-flex justify-content-center" style="margin-left: 60px">
                                 <label for="exampleInputName" class="form-label text-center">Book name</label>
                                 <input type="name" name="title" formControlName="title" class="form-control" id="exampleInputName" placeholder=" Enter book name" required style="width: 23rem; padding: 10px;">
                             </div>
-                            <div class="form-group mb-4 row d-flex justify-content-center">
+                            <div class="right form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleInputContact" class="form-label text-center">Author name</label>
                                 <input type="contact" name="author" formControlName="author" class="form-control" id="exampleInputContact" placeholder="Enter author name" required style="width: 23rem; padding: 10px;">
                             </div>
-                            <div class="form-group mb-4 row d-flex justify-content-center">
+                            <div class="left form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleInputContact" class="form-label text-center">Publisher name</label>
                                 <input type="contact" name="publisher" formControlName="publisher" class="form-control" id="exampleInputContact" placeholder="Enter author name" required style="width: 23rem; padding: 10px;">
                             </div>
-                            <div class="form-group mb-4 row d-flex justify-content-center">
+                            <div class="right form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleInputContact" class="form-label text-center">Condition</label>
                                 <input type="contact" name="condition" formControlName="condition" class="form-control" id="exampleInputContact" placeholder="Enter author name" required style="width: 23rem; padding: 10px;">
                             </div>
-                            <div class="form-group mb-4 row d-flex justify-content-center">
+                            <div class="left form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleFormControlTextarea1" class="form-label text-center">Book Description</label>
                                 <textarea class="form-control" name="description" formControlName="description" id="exampleFormControlTextarea1" rows="3" required style="width: 23rem;" placeholder="Book Description"></textarea>
                             </div>
-                            <div class="form-group mb-4 row d-flex justify-content-center">
+                            <div class="right form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleInputEmail1" class="form-label text-center">Category</label>
                                 <select id="inputState" name="category" formControlName="category" class="form-control" style="width: 23rem; padding: 10px;">
                                     <!-- <option selected>Choose book category </option>
@@ -44,15 +43,15 @@
                                     <option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</option>
                                   </select>
                             </div> 
-                            <div class="form-group mb-4 row d-flex justify-content-center">
+                            <div class="right form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleInputEmail1" class="form-label text-center">Sale Price</label>
                                 <input type="textarea" name="price" formControlName="price" class="form-control" id="exampleInputLocation" placeholder=" Enter sale price" required style="width: 23rem; padding: 10px;">
                             </div> 
-                            <div class="text-center my-2">
+                            <div class="left text-center my-2" style="padding-left: 65px;">
                                 <input type="file"  (change)="bookCover($event)"  name="book_image"  id=""  accept=".jpg, .jpeg, .png">
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary mb-4" style="padding: 10px;">Add Product</button>
+                                <button type="submit" class="btn btn-primary mb-4" style="padding: 10px; margin-top: 50px; margin-left: 500px">Add Product</button>
                             </div>   
                          
                         </fieldset>
