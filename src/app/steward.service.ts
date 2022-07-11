@@ -93,6 +93,22 @@ export class StewardService<T, E> {
     //   catchError(this.handleError<any>())
     // );
   }
+
+  postFormDataMultipart(endpoint: string, data: any): Observable<any> {
+    const formData: FormData = new FormData();
+    Object.keys(data).map((key) => {
+      if (Array.isArray(data[key])) {
+        data[key].forEach((k2: string | Blob) => {
+          formData.append(key, k2);
+        });
+      } else {
+        formData.append(key, data[key]);
+      }
+    });
+
+    return this.http.post(this.globalParam.baseUrl + endpoint, formData, {headers: this.getHeaders('form-data')})
+  
+  }
   postNotoken(endpoint: string, data: T): Observable<any> {
     return this.http.post(this.globalParam.baseUrl + endpoint, JSON.stringify(data),
      {headers: this.getHeaders('no-token')

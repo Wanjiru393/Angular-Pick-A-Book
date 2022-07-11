@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
+import { BookdetailsService } from 'src/app/service/bookdetails.service';
+
 import { StewardService } from 'src/app/steward.service';
+
 
 @Component({
   selector: 'app-categories',

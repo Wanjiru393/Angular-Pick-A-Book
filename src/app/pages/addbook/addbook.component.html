@@ -1,4 +1,4 @@
-
+<app-navbar></app-navbar>
 
 <div class="container mt-3">
     <div class="row mt-3">
@@ -13,35 +13,54 @@
         <div class="content-section">
             <div class="row">
                 <div class="col">
-                    <form method="POST" action="">
+                    <form [formGroup]="Books" #form="ngForm" (ngSubmit)="onCreateBooks()" role="form" action=""  >
         
                         <fieldset class="form-group">
                             <div class="form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleInputName" class="form-label text-center">Book name</label>
-                                <input type="name" class="form-control" id="exampleInputName" placeholder=" Enter book name" required style="width: 23rem; padding: 10px;">
+                                <input type="name" name="title" formControlName="title" class="form-control" id="exampleInputName" placeholder=" Enter book name" required style="width: 23rem; padding: 10px;">
                             </div>
                             <div class="form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleInputContact" class="form-label text-center">Author name</label>
-                                <input type="contact" class="form-control" id="exampleInputContact" placeholder="Enter author name" required style="width: 23rem; padding: 10px;">
+                                <input type="contact" name="author" formControlName="author" class="form-control" id="exampleInputContact" placeholder="Enter author name" required style="width: 23rem; padding: 10px;">
+                            </div>
+                            <div class="form-group mb-4 row d-flex justify-content-center">
+                                <label for="exampleInputContact" class="form-label text-center">Publisher name</label>
+                                <input type="contact" name="publisher" formControlName="publisher" class="form-control" id="exampleInputContact" placeholder="Enter author name" required style="width: 23rem; padding: 10px;">
+                            </div>
+                            <div class="form-group mb-4 row d-flex justify-content-center">
+                                <label for="exampleInputContact" class="form-label text-center">Condition</label>
+                                <input type="contact" name="condition" formControlName="condition" class="form-control" id="exampleInputContact" placeholder="Enter author name" required style="width: 23rem; padding: 10px;">
                             </div>
                             <div class="form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleFormControlTextarea1" class="form-label text-center">Book Description</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required style="width: 23rem;" placeholder="Book Description"></textarea>
+                                <textarea class="form-control" name="description" formControlName="description" id="exampleFormControlTextarea1" rows="3" required style="width: 23rem;" placeholder="Book Description"></textarea>
                             </div>
                             <div class="form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleInputEmail1" class="form-label text-center">Category</label>
+
+                                <select id="inputState" name="category" formControlName="category" class="form-control" style="width: 23rem; padding: 10px;">
+                                    <!-- <option selected>Choose book category </option>
+                                    <option>Fiction</option> -->
+                                    <option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</option>
+
                                 <select id="inputState" class="form-control dropdown-toggle" style="width: 23rem; padding: 10px;">
                                     <option selected class="dropdown-toggle">Choose book category</option>
                                     <option>Fiction</option>
+
                                   </select>
                             </div> 
                             <div class="form-group mb-4 row d-flex justify-content-center">
                                 <label for="exampleInputEmail1" class="form-label text-center">Sale Price</label>
-                                <input type="textarea" class="form-control" id="exampleInputLocation" placeholder=" Enter sale price" required style="width: 23rem; padding: 10px;">
+                                <input type="textarea" name="price" formControlName="price" class="form-control" id="exampleInputLocation" placeholder=" Enter sale price" required style="width: 23rem; padding: 10px;">
                             </div> 
+                            <div class="text-center my-2">
+                                <input type="file"  (change)="bookCover($event)"  name="book_image"  id=""  accept=".jpg, .jpeg, .png">
+                            </div>
                             <div class="text-center">
-                                <button routerLink="/categories"type="button" class="btn btn-primary mb-4" style="padding: 10px;">Add Product</button>
+                                <button type="submit" class="btn btn-primary mb-4" style="padding: 10px;">Add Product</button>
                             </div>   
+                         
                         </fieldset>
                     </form>
                 </div>
@@ -51,3 +70,4 @@
     </div>
   </div>
   
+  <app-footer></app-footer>
