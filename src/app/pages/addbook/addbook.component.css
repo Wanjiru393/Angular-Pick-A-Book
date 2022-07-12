@@ -16,3 +16,11 @@
 .btn{
     background: #05668D;
 }
+.left{
+  float: left;
+  margin-left: 50px;
+}
+.right{
+  float: right;
+  margin-right: 50px;
+}
