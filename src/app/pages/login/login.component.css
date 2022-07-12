@@ -5,7 +5,7 @@ form input{
     background-image: url('/assets/img/Group 1.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 995px 800px;
+    background-size: cover;
   }
   
   .login-heading {

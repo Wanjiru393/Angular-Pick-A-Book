@@ -6,10 +6,10 @@
             
             <div class="card-body" style="margin-left:5px;">
                 <div class="content mt-5">
-                    <p class="card text" style="font-size:1.8em;border:none;">
+                    <p class="card text my-5" style="font-size:1.8em;border:none;">
                     You need it,we've got it!<br>
                     Your number 1 supplier of quality affordable books</p>
-                    <a routerLink="categories">Shop Now <i class="bi bi-arrow-right"></i></a>
+                    <a routerLink="categories">Shop Now <i class="bi bi-arrow-right "></i></a>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
 
     <div class="col-sm-6">
         <div class="card" style="margin-right:80px; border:none;">
-            <img src="../../assets/img/Group 96.png" style="height:55vh;" alt="">
+            <img src="../../assets/img/Group 96.png" class="img-fluid" style="height:55vh;" alt="">
       </div>
 </div>
 </div>
@@ -29,15 +29,14 @@
     <h2 class="text-center">Book Categories</h2>
     <div class="row mt-5">
         <!-- one  -->
-        <div class="col-sm-3 mt-2">
+        <div class="col-sm-3 mt-2" *ngFor="let cat of all_categories">
 
             <div class="stepBox">
-                <img src="../../assets/img/books 1.svg" style="height:10vh;" alt="">
-                <p>fiction</p>
+                <img src="../../assets/img/books 1.svg" (click)="viewCategory(cat.name)" style="height:10vh;" alt="">
+                <p class="text-center">{{cat.name}}</p>
             </div>
         </div>
-<!-- two -->
-        <div class="col-sm-3 mt-2">
+        <!-- <div class="col-sm-3 mt-2">
             <div class="stepBox">
                 <img src="../../assets/img/journal 1.svg" style="height:10vh;" alt="">
                 <p>Journals</p>
@@ -52,24 +51,28 @@
             </div>
         </div>
 
-        <!-- three  -->
         <div class="col-sm-3 mt-2">
             <div class="stepBox">
                 <img src="../../assets/img/knowledge 1.svg" style="height:10vh;" alt="">
                 <p>Academic</p>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 <!-- bookbox  -->
 <div class="container mt-5 mb-5">
     <h1 class="text-center mt-4" style="font-weight: 500px;">Favourites.</h1>
     <div class="row">
-    <div class="col-lg-3 mt-4" *ngFor="let fd of bookData;index as i">
+    <!-- <div class="col-lg-3 mt-4" *ngFor="let fd of bookData;index as i">
         <div class="bookbox" *ngIf="i<=3">
             <img src="{{fd.bookImg}}" />
             <h1>{{fd.bookName}}</h1>
             <p>{{fd.bookPrice | currency:'KSH'}}</p>
+        </div>
+    </div> -->
+    <div class="col-lg-3" *ngFor="let book of all_books">
+        <div class="my-3">
+            <img src="https://res.cloudinary.com/hanancodes/{{book.book_image}}" (click)="viewBook(book.id)" alt="">
         </div>
     </div>
 </div>

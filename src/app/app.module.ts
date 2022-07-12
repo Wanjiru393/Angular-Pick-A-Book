@@ -20,6 +20,7 @@ import { HagglingComponent } from './pages/haggling/haggling.component';
 import {StewardService} from './steward.service';
 import { HttpClient } from '@angular/common/http';
 import { BookdetailComponent } from './pages/bookdetail/bookdetail.component';
+import { FilterComponent } from './filter/filter.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { BookdetailComponent } from './pages/bookdetail/bookdetail.component';
     CategoriesComponent,
     PaymentComponent,
     HagglingComponent,
-    BookdetailComponent
+    BookdetailComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
