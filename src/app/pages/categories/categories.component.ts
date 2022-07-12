@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { BookdetailsService } from 'src/app/service/bookdetails.service';
 
@@ -15,6 +16,8 @@ export class CategoriesComponent implements OnInit {
 all_books:any
   constructor(
     private stewardService: StewardService<any, any>,
+    protected router: Router,
+
 
   ) { }
 
@@ -29,6 +32,9 @@ all_books:any
   
       }
     })
+  }
+  viewBook(id:any){
+    this.router.navigate(['book',id])
   }
 
 }

@@ -10,6 +10,7 @@ import {ProfileComponent } from './pages/profile/profile.component';
 import {CategoriesComponent } from './pages/categories/categories.component';
 import {PaymentComponent } from './pages/payment/payment.component';
 import {HagglingComponent } from './pages/haggling/haggling.component';
+import { BookdetailComponent } from './pages/bookdetail/bookdetail.component';
 
 
 
@@ -24,9 +25,8 @@ const routes: Routes = [
   {path: 'categories',component:CategoriesComponent},
   {path: 'payment',component:PaymentComponent},
   {path: 'haggling',component:HagglingComponent},
-
-];
-
+  {path:'book/:id',component:BookdetailComponent},
+]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
