@@ -11,6 +11,7 @@ import {CategoriesComponent } from './pages/categories/categories.component';
 import {PaymentComponent } from './pages/payment/payment.component';
 import {HagglingComponent } from './pages/haggling/haggling.component';
 import { BookdetailComponent } from './pages/bookdetail/bookdetail.component';
+import { FilterComponent } from './filter/filter.component';
 
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'payment',component:PaymentComponent},
   {path: 'haggling',component:HagglingComponent},
   {path:'book/:id',component:BookdetailComponent},
+  {path:'filter/:category',component:FilterComponent}
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

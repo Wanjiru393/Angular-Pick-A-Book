@@ -3,10 +3,10 @@ form input{
 }
 
 .bg-image {
-    background-image: url('/assets/img/Group 84.jpg');
+    background-image: url('/assets/img/Group 84.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 995px 740px;
+    background-size: contain;
   }
   
   .login-heading {
