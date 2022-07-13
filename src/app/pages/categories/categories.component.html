@@ -83,7 +83,7 @@
                     <h6 class="author text-gray-900 title-font text-lg font-medium">By: {{book.author}}</h6>
                     <div class="parent">
                       <span class="mt-1 line" style="color: black;">${{book.price}}
-                      <img src="../../assets/img/bag.png" alt="" width="20" height="20"  class="line bag"></span>
+                      <img src="../../assets/img/bag.png" (click)="addCart(book.id)" alt="" width="20" height="20"  class="line bag"></span>
                     </div> 
                   </div>
                 </div>

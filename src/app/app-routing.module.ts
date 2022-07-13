@@ -17,7 +17,7 @@ import { FilterComponent } from './filter/filter.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'cart',component:CartComponent},
+  {path:'cart/:id',component:CartComponent},
   {path:'add',component:AddbookComponent},
   {path:'contact',component:ContactComponent},
   {path: 'login',component:LoginComponent},
