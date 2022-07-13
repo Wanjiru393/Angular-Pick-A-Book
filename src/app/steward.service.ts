@@ -142,6 +142,14 @@ export class StewardService<T, E> {
     return this.http.get(this.globalParam.baseUrl + endpoint, options)
 
   }
+  delete(endpoint: string, data?: Map<string, string>): Observable<any> {
+    return this.http.delete(this.globalParam.baseUrl + endpoint, 
+     {headers: this.getHeaders('clean')
+    })
+    //  .pipe(
+    //   catchError(this.handleError<any>())
+    // );
+  }
   // getNotoken(endpoint: string, data?: Map<string, string>): Observable<ResponseWrapper<E>> {
   //   const options = {
   //     headers: this.getHeaders('no-token'),

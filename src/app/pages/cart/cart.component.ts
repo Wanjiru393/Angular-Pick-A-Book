@@ -19,6 +19,10 @@ export class CartComponent implements OnInit {
   username:any;
   user_id:any
   all_users:any
+  cart_items:any
+  total:any
+  grandtotal:any=[]
+  finalTotal:any
 
 
   constructor(private cartService : CartService,
@@ -32,57 +36,69 @@ export class CartComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.Cart=this.fb.group({
-      book:["",Validators.required],
-      user:["",Validators.required],
-      quantity:["",Validators.required]
-    })
-    
-    this.cartService.getProducts()
-    .subscribe(res=>{
-      this.products = res;
-      this.grandTotal = this.cartService.getTotalPrice();
-    })
+  
     this.username=localStorage.getItem('username')
+    console.log("username",this.username);
+    
 
-    let id = this.route.snapshot.paramMap.get('id');
 
-    this.stewardService.get("all_users/?username="+this.username).subscribe((response) => {
-    if(response){
-      response.forEach((user:any) => {
-        this.all_users=user.id
-        console.log(">>>>users",this.all_users);
-        
-      })
+    this.stewardService.get(`all_users/?username=${this.username}`).subscribe((response) => {
+ 
+      if (response) {
+        response.forEach((user:any)=>{
+          this.stewardService.get(`carts?user=${user.id}`).subscribe((response: any) => {
+
+            if (response) {
+             console.log(response);
+             this.cart_items=response
+
+             response.map((res:any)=>{
+
+              this.total=(res.book.price*res.quantity)
+              this.grandtotal.push(this.total)
+
+              this.finalTotal= this.grandtotal.reduce((a:any, b:any) => a + b, 0)
+                        
+
+              
+              
+             })
+            // console.log(this.finalTotal);
+            
+            }
+          })
+              
+        })
       }
     })
- 
-        console.log("book id?>>>",id);
-        this.Cart.patchValue({
-          book:id,
-          user:this.all_users,
-          quantity:1,
-        })
-        this.model=this.Cart.value
 
-        this.stewardService.post('carts',this.model).subscribe((response:any)=>{
-          if(response){
-            console.log("cart>>>>>>>>",response);
-            this.router.navigate(['cart']);
-          }
-        })
+
    
  
   }
-    addCart(){
-   
-  
-  }
-  removeItem(item: any){
-    this.cartService.removeCartItem(item);
+
+  removeItem(id:any){
+    console.log("id>>",id);
+    
+
+    this.stewardService.delete(`carts?cart=${id}`).subscribe((response:any)=>{
+      if(response){
+        console.log(response);
+        window.location.reload();
+        this.router.navigate(['cart']);
+
+      }
+    })
   }
   emptycart(){
-    this.cartService.removeAllCart();
-  }
+    this.stewardService.delete(`empty_carts`).subscribe((response:any)=>{
+      if(response){
+        console.log(response);
+        window.location.reload();
+        this.router.navigate(['cart']);
+
+      }
+    })
+    }
 
 }
