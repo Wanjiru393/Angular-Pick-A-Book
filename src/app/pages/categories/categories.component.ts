@@ -39,12 +39,12 @@ all_books:any
 
       if (response) {
         this.all_books=response
-        console.log(this.all_books);
         
 
   
       }
     })
+
     this.username=localStorage.getItem('username')
  
     this.stewardService.get("all_users/?username="+this.username).subscribe((response) => {
@@ -52,7 +52,9 @@ all_books:any
         response.forEach((user:any) => {
             console.log(user.id);
             this.Cart.patchValue({
-              user:user.id
+              user:user.id,
+              quantity:1,
+              
             })
         })
       }
@@ -62,18 +64,22 @@ all_books:any
   viewBook(id:any){
     this.router.navigate(['book',id])
   }
-  addCart(id:any){
-    this.router.navigate(['cart',id])
-  }
-  // addCart(){
-  //   this.model=this.Cart.value
-
-  //   this.stewardService.post('carts/',this.model).subscribe((response:any)=>{
-  //     if(response){
-  //       console.log(response);
-  //       this.router.navigate(['cart']);
-  //     }
-  //   })
+  // addCart(id:any){
+  //   this.router.navigate(['cart',id])
   // }
+  addCart(id:any){
+    this.Cart.patchValue({
+      book:id
+    })
+    this.model=this.Cart.value
+    
+
+    this.stewardService.post('carts',this.model).subscribe((response:any)=>{
+      if(response){
+        console.log(response);
+        this.router.navigate(['cart']);
+      }
+    })
+  }
 
 }
