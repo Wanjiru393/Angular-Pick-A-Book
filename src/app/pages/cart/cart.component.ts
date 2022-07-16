@@ -58,10 +58,7 @@ export class CartComponent implements OnInit {
               this.grandtotal.push(this.total)
 
               this.finalTotal= this.grandtotal.reduce((a:any, b:any) => a + b, 0)
-                        
-
-              
-              
+                      
              })
             // console.log(this.finalTotal);
             
@@ -71,10 +68,6 @@ export class CartComponent implements OnInit {
         })
       }
     })
-
-
-   
- 
   }
 
   removeItem(id:any){

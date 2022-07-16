@@ -1,29 +1,33 @@
 
 .title{
   color: #000000;
-  font-weight: 500;
-  font-size: 17px;
+  font-weight: 600;
+  font-size: 19px;
 }
-.author{
+.card-text{
   color: #E48257;
   font-style: italic;
-  font-weight: 500;
-  font-size: 17px;
+  font-weight: 200;
+  font-size: 15px;
 
 }
 .divide{
     width: 100px;
 }
+.image{
+    height:30vh;
+    width:400px;
+}
 
-.py-24{
+/* .py-24{
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-.px-5{
+} */
+/* .px-5{
   padding-right: 1rem!important;
   padding-left: 1rem!important;
   height: 400px;
-}
+} */
 
 .btn{
     background: #05668D;
@@ -58,33 +62,34 @@ a:focus{
     text-decoration: none;
     transition: all 0.3s;
 }
-.navbar{
+/* .navbar{
     padding:15px 10px;
     background: #fff;
     border:none;
     border-radius: 0;
     margin-bottom: 20px;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-.navbar-btn{
+} */
+/* .navbar-btn{
     box-shadow: none;
     outline:none !important;
     border:none;
-}
+} */
 .line{
     display: inline-block;
+    
 }
 
-.bag{
+/* .bag{
   margin-left: 90px;
-}
+} */
 
-.wrapper{
+/* .wrapper{
     
     width:100%;
     align-items: ce; 
-}
-#sidebar{
+} */
+/* #sidebar{
     min-width:250px;
     max-width: 250px;
     color:rgb(9, 9, 9);
@@ -121,8 +126,8 @@ a:focus{
 a[aria-expanded="true"]{
     color:#fff;
     background: #318fb5;
-}
-a[data-toggle="collapse"]{
+} */
+/* a[data-toggle="collapse"]{
     position: relative;
 }
 .dropdown-toggle::after{
@@ -136,8 +141,8 @@ ul ul a{
     font-size:0.9em !important;
     padding-left: 30px !important;
     background: #318fb5;
-}
-ul.CTAs{
+} */
+/* ul.CTAs{
     padding:20px;
 }
 ul.CTAs a{
@@ -146,14 +151,14 @@ ul.CTAs a{
     display: block;
     border-radius: 5px;
     margin-bottom:5px;
-}
+} */
 
-#content{
+/* #content{
     width:100%;
     padding:20px;
     min-height: 100vh;
     transition: all 0.3s;
-}
+} */
 .content-wrapper{
     padding:15px;
     padding-top: 60px!important;
@@ -170,7 +175,7 @@ ul.CTAs a{
 }
 
 .parent{
-  display: inline-block;
+  margin-top:5px;
   overflow: hidden;
   white-space: nowrap;
 }

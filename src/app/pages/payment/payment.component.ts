@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentComponent implements OnInit {
 
-  constructor() { }
+  phone!: string;
+
+  constructor() { }  
+
+ OnInput(el:any){
+  console.log(el.target.value)
+ }
+
+  OnClick(){
+    console.log(this.phone)
+  }
+
 
   ngOnInit(): void {
+    
   }
 
 }

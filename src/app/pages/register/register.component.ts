@@ -31,7 +31,8 @@ public router: Router,
     localStorage.setItem('username', this.register.username);
 
     localStorage.setItem('isRegister', 'true');
-    this.router.navigate(['']);
+    this.router.navigate(['login']);
+    console.log(response)
     
     }
     });
